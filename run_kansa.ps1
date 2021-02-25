@@ -3,6 +3,9 @@
 # Author: Starke427
 # Modified: 2021 Feb 24
 
+# Move to C:\ to prevent writing output to SystemRoot
+cd C:\
+
 # Download Kansa from davehull/Kansa
 $url1 = "https://github.com/davehull/Kansa/archive/master.zip"
 $file1 = "C:\Kansa.zip"
@@ -31,15 +34,15 @@ $ModuleConf = @"
 
 Process\Get-PrefetchListing.ps1
 # Process\Get-PrefetchFiles.ps1
-#Process\Get-WMIRecentApps.ps1
+# Process\Get-WMIRecentApps.ps1
 Net\Get-Netstat.ps1
 Net\Get-DNSCache.ps1
-#Net\Get-Arp.ps1
+# Net\Get-Arp.ps1
 Net\Get-SmbSession.ps1
 # Process\Get-Prox.ps1
 Process\Get-Tasklistv.ps1
-#Process\Get-Handle.ps1
-#Process\Get-RekalPslist.ps1
+# Process\Get-Handle.ps1
+# Process\Get-RekalPslist.ps1
 Process\Get-ProcsWMI.ps1
 # Process\Get-ProcDump.ps1
 # Process\Get-ProcsNModules.ps1
@@ -91,7 +94,7 @@ Config\Get-LocalAdmins.ps1
 ## Long running jobs go here so they're always last.
 ASEP\Get-Autorunsc.ps1
 # ASEP\Get-AutorunscDeep.ps1
-#ASEP\Get-Sigcheck.ps1
+# ASEP\Get-Sigcheck.ps1
 # ASEP\Get-SigcheckRandomPath.ps1
 # Disk\Get-FlsBodyFile.ps1
 # IOC\Get-Loki.ps1
@@ -129,8 +132,13 @@ $Message = @"
 
 You have successfully run Kansa!! 
 
-An output of forensic data is now available
-in your current working directory.
+An output of forensic data is now available in your current working directory.
+
+It is highly advised that you install Eric Zimmerman's [Timeline Explorer]
+(https://f001.backblazeb2.com/file/EricZimmermanTools/TimelineExplorer.zip) 
+for opening CSV's within Windows for easier viewing. Alternatively, you can 
+import them into excel or view them directly within PowerShell using 
+Import-Csv C:\Output*.csv | Format-Table.
 
 "@
 echo $Message
