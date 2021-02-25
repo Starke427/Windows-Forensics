@@ -34,8 +34,8 @@ You will be prompted for your current user's credentials when run. If you'd like
 
 ```
 $url1 = "https://raw.githubusercontent.com/Starke427/Windows-Forensics/main/run_kansa.ps1"
-$file1 = "run_kansa.ps1"
+$file1 = "C:\run_kansa.ps1"
 (New-Object -TypeName System.Net.WebClient).DownloadFile($url1, $file1)
 Set-ExecutionPolicy -ExecutionPolicy Bypass -force
-& "run_kansa.ps1"
+& "C:\run_kansa.ps1"
 ```
