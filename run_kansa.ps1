@@ -126,13 +126,14 @@ C:\Kansa\Kansa-master\kansa.ps1 -Pushbin -Target localhost -ModulePath C:\Kansa\
 
 # Remove traces
 Remove-Item "C:\Kansa*" -Recurse
+Remove-Item "C:\run_kansa.ps1"
 Remove-Item "C:\Autoruns*" -Recurse
 
 $Message = @"
 
 You have successfully run Kansa!! 
 
-An output of forensic data is now available in your current working directory.
+An output of forensic data is now available in your C:\ directory.
 
 It is highly advised that you install Eric Zimmerman's [Timeline Explorer]
 (https://f001.backblazeb2.com/file/EricZimmermanTools/TimelineExplorer.zip) 
