@@ -116,6 +116,8 @@ Enable-PSRemoting -force
 ls -r *.ps1 | Unblock-File
 Set-ExecutionPolicy Unrestricted
 $User = whoami
+#$PWord = ConvertTo-SecureString -String "CHANGEME" -AsPlainText -Force
+#AltCredential = New-Object -TypeName System.Management.AUtomation.PSCredential -ArgumentList $User, $PWord
 $Credential = Get-Credential -Credential $User
 C:\Kansa\Kansa-master\kansa.ps1 -Pushbin -Target localhost -ModulePath C:\Kansa\Kansa-master\Modules -Credential $Credential -Authentication Negotiate
 
