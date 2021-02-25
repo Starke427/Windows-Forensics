@@ -3,7 +3,7 @@
 # Author: Starke427
 # Modified: 2021 Feb 24
 
-# Move to C:\ to prevent writing output to SystemRoot
+# Move to C:\ to prevent accidentally touching to SystemRoot
 cd C:\
 
 # Download Kansa from davehull/Kansa
