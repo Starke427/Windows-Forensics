@@ -141,5 +141,8 @@ for opening CSV's within Windows for easier viewing. Alternatively, you can
 import them into excel or view them directly within PowerShell using 
 Import-Csv C:\Output*.csv | Format-Table.
 
+Note: If downloading Timeline Explorer, DO NOT USE WINDOWS TO EXTRACT THINGS. 
+Use 7-Zip or Winrar as Windows will block the DLLs!
+
 "@
 echo $Message
