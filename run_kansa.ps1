@@ -116,7 +116,7 @@ Set-Content -Path "C:\Kansa\Kansa-master\Modules\ASEP\Get-Autorunsc.ps1" -Value 
 
 # Set up localhost to run Kansa
 Enable-PSRemoting -force
-ls -r *.ps1 | Unblock-File
+ls -r C:\Kansa\Kansa-master\*.ps1 | Unblock-File
 Set-ExecutionPolicy Unrestricted
 $User = whoami
 #$PWord = ConvertTo-SecureString -String "CHANGEME" -AsPlainText -Force
