@@ -1,7 +1,7 @@
 # Windows-Forensics
 Simplify generating forensic artifacts on Windows hosts by running this immutable script that will pull down Kansa and Autorunsc.
 
-Output folder will be written to your current working directory and will include:
+Output folder will be written to your C:\ directory and will include:
 
 * Autorunsc
 * DNSCache
