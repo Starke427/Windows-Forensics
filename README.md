@@ -39,3 +39,15 @@ $file1 = "C:\run_kansa.ps1"
 Set-ExecutionPolicy -ExecutionPolicy Bypass -force
 & "C:\run_kansa.ps1"
 ```
+
+## Automated PCAP Collection
+
+[get_pcap.ps1](https://raw.githubusercontent.com/Starke427/Windows-Forensics/main/get_pcap.ps1) will download, run and remove tshark after generating a 50MB PCAP. It must be run from an Administrative PowerShell.
+
+```
+$url1 = "https://raw.githubusercontent.com/Starke427/Windows-Forensics/main/get_pcap.ps1"
+$file1 = "C:\get_pcap.ps1"
+(New-Object -TypeName System.Net.WebClient).DownloadFile($url1, $file1)
+Set-ExecutionPolicy -ExecutionPolicy Bypass -force
+& "C:\get_pcap.ps1"
+```
