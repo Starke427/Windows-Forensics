@@ -19,3 +19,4 @@ $interface = Read-Host -Prompt "Please enter the InterfaceAlias you would like t
 $date = Get-Date -UFormat %Y%B%d_%H%M
 & "C:\Tshark\tshark.exe" -i $interface -a filesize:50000 -w C:\capture_$date.pcap
 Remove-Item -Path C:\Tshark -Recurse -Force
+Remove-Item -Path C:\get_pcap.ps1 -Force
