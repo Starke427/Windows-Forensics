@@ -11,8 +11,7 @@ Expand-Archive -LiteralPath C:\Tshark.zip -DestinationPath C:\
 Remove-Item -Path C:\Tshark.zip -Force
 
 # Prompt for Tshark Interface
-$availableInterfaces = Get-NetIPConfiguration | Select InterfaceAlias,IPv4Address | Sort-Object -Property InterfaceAlias # Get Interface names and IPs
-echo $availableInterfaces
+Get-NetIPConfiguration | Select InterfaceAlias,IPv4Address | Sort-Object -Property InterfaceAlias | Format-Table # Get Interface names and IPs
 $interface = Read-Host -Prompt "Please enter the InterfaceAlias you would like to capture: "
 
 # Run Tshark and Capture 50MB PCAP
