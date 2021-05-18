@@ -12,7 +12,7 @@ Remove-Item -Path C:\Tshark.zip -Force
 
 # Prompt for Tshark Interface
 Get-NetIPConfiguration | Select InterfaceAlias,IPv4Address | Sort-Object -Property InterfaceAlias | Format-Table # Get Interface names and IPs
-$interface = Read-Host -Prompt "Please enter the InterfaceAlias you would like to capture: "
+$interface = Read-Host -Prompt "Please enter the InterfaceAlias you would like to capture"
 
 # Run Tshark and Capture 50MB PCAP
 $date = Get-Date -UFormat %Y%B%d_%H%M
